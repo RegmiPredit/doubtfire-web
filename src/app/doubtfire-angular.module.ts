@@ -17,9 +17,12 @@ import { DoubtfireConstants } from 'src/app/config/constants/doubtfire-constants
 import { DoubtfireAngularJSModule } from 'src/app/doubtfire-angularjs.module';
 import { HttpErrorInterceptor } from './common/services/http-error.interceptor';
 
+import { ProgressDialog } from 'src/app/common/modals/progress-modal/progress-modal.component';
+
 @NgModule({
   declarations: [
-    AboutDoubtfireModalContent
+    AboutDoubtfireModalContent,
+    ProgressDialog
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,7 @@ import { HttpErrorInterceptor } from './common/services/http-error.interceptor';
     useClass: HttpErrorInterceptor,
     multi: true
   }, AboutDoubtfireModal, AboutDoubtfireModalService, DoubtfireConstants],
-  entryComponents: [AboutDoubtfireModalContent]
+  entryComponents: [AboutDoubtfireModalContent, ProgressDialog]
 })
 export class DoubtfireAngularModule {
   constructor(private upgrade: UpgradeModule, private constants: DoubtfireConstants, private title: Title) {

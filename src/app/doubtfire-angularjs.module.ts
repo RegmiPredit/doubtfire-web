@@ -11,6 +11,7 @@ import { downgradeInjectable } from '@angular/upgrade/static';
 
 import { AboutDoubtfireModal } from 'src/app/common/modals/about-doubtfire-modal/about-doubtfire-modal.component'
 import { DoubtfireConstants } from 'src/app/config/constants/doubtfire-constants';
+import { ProgressModal } from 'src/app/common/modals/progress-modal/progress-modal.component';
 
 // Here are the old angular node modules, previously loaded via grunt
 
@@ -297,6 +298,8 @@ DoubtfireAngularJSModule.factory('AboutDoubtfireModal',
   downgradeInjectable(AboutDoubtfireModal));
 DoubtfireAngularJSModule.factory('DoubtfireConstants',
   downgradeInjectable(DoubtfireConstants));
+DoubtfireAngularJSModule.factory('ProgressModal',
+  downgradeInjectable(ProgressModal));
 
 // Global configuration
 
